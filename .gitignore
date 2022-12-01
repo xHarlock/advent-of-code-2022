@@ -27,3 +27,5 @@ hs_err_pid*
 /target/
 *.iml
 /out/
+/src/main/resources/
+cookie.txt

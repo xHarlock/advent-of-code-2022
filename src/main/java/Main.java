@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] args) {
         days = List.of(new Day01(), new Day02());
 
-        printAll();
-//        print(2);
+//        printAll();
+        print(2);
     }
 
     private static void printAll() {

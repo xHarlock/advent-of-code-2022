@@ -45,6 +45,9 @@ public class Day03 extends AdventDay {
         return Character.isUpperCase(c) ? c - 'A' + 27 : c - 'a' + 1;
     }
 
+    /**
+     * Returns a list of characters that are common in all given strings.
+     */
     private List<Character> getCommonChars(String... strings) {
         List<Character> chars = new ArrayList<>(convertToCharList(strings[0]));
         for (int i = 1; i < strings.length; i++) {

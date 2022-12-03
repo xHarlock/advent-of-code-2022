@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.List;
+
 public abstract class AdventDay {
 
     /**
@@ -35,5 +37,13 @@ public abstract class AdventDay {
      */
     public int getDay() {
         return getClass().getAnnotation(Day.class).day();
+    }
+
+    protected List<Character> convertToCharList(String s) {
+        return s.chars().mapToObj(c -> (char) c).toList();
+    }
+
+    protected String[] splitInHalf(String s) {
+        return new String[]{s.substring(0, s.length() / 2), s.substring(s.length() / 2)};
     }
 }

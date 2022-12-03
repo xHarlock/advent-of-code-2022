@@ -1,5 +1,6 @@
 import days.Day01;
 import days.Day02;
+import days.Day03;
 import utils.AdventDay;
 
 import java.util.List;
@@ -10,10 +11,9 @@ public class Main {
     private static List<AdventDay> days;
 
     public static void main(String[] args) {
-        days = List.of(new Day01(), new Day02());
+        days = List.of(new Day01(), new Day02(), new Day03());
 
-//        printAll();
-        print(2);
+        printAll();
     }
 
     private static void printAll() {

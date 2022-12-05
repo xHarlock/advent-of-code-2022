@@ -10,7 +10,7 @@ import java.util.List;
 public class Day03 extends AdventDay {
 
     @Override
-    public long part1() {
+    public String part1() {
         List<Integer> priorities = new ArrayList<>();
 
         for (String rucksack : input.split("\n")) {
@@ -19,11 +19,12 @@ public class Day03 extends AdventDay {
             int priority = getPriority(chars.get(0));
             priorities.add(priority);
         }
-        return priorities.stream().mapToInt(Integer::intValue).sum();
+        int result = priorities.stream().mapToInt(Integer::intValue).sum();
+        return String.valueOf(result);
     }
 
     @Override
-    public long part2() {
+    public String part2() {
         List<Integer> priorities = new ArrayList<>();
 
         String[] elves = input.split("\n");
@@ -33,7 +34,8 @@ public class Day03 extends AdventDay {
             int priority = getPriority(chars.get(0));
             priorities.add(priority);
         }
-        return priorities.stream().mapToInt(Integer::intValue).sum();
+        int result = priorities.stream().mapToInt(Integer::intValue).sum();
+        return String.valueOf(result);
     }
 
     /**

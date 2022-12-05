@@ -12,15 +12,15 @@ import java.util.List;
 public class Day01 extends AdventDay {
 
     @Override
-    public long part1() {
+    public String part1() {
         List<Integer> sums = getSums();
-        return sums.get(0);
+        return String.valueOf(sums.get(0));
     }
 
     @Override
-    public long part2() {
+    public String part2() {
         List<Integer> sums = getSums();
-        return sums.get(0) + sums.get(1) + sums.get(2);
+        return String.valueOf(sums.get(0) + sums.get(1) + sums.get(2));
     }
 
     /**

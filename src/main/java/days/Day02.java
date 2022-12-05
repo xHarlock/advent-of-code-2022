@@ -13,15 +13,15 @@ public class Day02 extends AdventDay {
     private List<Shape> player;
 
     @Override
-    public long part1() {
+    public String part1() {
         initializeShapes(false);
-        return getGameScore();
+        return String.valueOf(getGameScore());
     }
 
     @Override
-    public long part2() {
+    public String part2() {
         initializeShapes(true);
-        return getGameScore();
+        return String.valueOf(getGameScore());
     }
 
     private void initializeShapes(boolean playerSpecial) {

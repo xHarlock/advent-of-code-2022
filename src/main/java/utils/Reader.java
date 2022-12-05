@@ -13,6 +13,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 @SuppressWarnings("unused")
 public class Reader {
@@ -54,6 +55,18 @@ public class Reader {
         }
         scanner.close();
         return lines.toArray(new String[0]);
+    }
+
+    public static String[] readLines(int day) {
+        String path = String.format("./src/main/resources/day_%02d.txt", day);
+        String[] lines;
+
+        try (Stream<String> stream = Files.lines(Path.of(path))) {
+            lines = stream.toArray(String[]::new);
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+        return lines;
     }
 
     /**
@@ -107,10 +120,11 @@ public class Reader {
         try {
             scanner = new Scanner(new File("cookie.txt"));
         } catch (FileNotFoundException e) {
-            throw new RuntimeException("Text file with the cookie not found!");
+            throw new RuntimeException("Text file with cookie not found!");
         }
-        String s = scanner.nextLine();
-        scanner.close();
-        return s;
+        if (!scanner.hasNextLine()) {
+            throw new RuntimeException("Text file with cookie is empty!");
+        }
+        return scanner.nextLine();
     }
 }

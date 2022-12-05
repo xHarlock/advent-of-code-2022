@@ -12,12 +12,12 @@ public abstract class AdventDay {
     /**
      * Calculates the answer to part 1 of the day's puzzle.
      */
-    public abstract long part1();
+    public abstract String part1();
 
     /**
      * Calculates the answer to part 2 of the day's puzzle.
      */
-    public abstract long part2();
+    public abstract String part2();
 
     /**
      * Reads the input from either a file or from the website directly and stores it in the input field.

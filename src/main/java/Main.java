@@ -9,9 +9,9 @@ public class Main {
     private static List<AdventDay> days;
 
     public static void main(String[] args) {
-        days = List.of(new Day01(), new Day02(), new Day03(), new Day04(), new Day05());
+        days = List.of(new Day01(), new Day02(), new Day03(), new Day04(), new Day05(), new Day06());
         //printAll();
-        print(5);
+        print(6);
     }
 
     private static void printAll() {
